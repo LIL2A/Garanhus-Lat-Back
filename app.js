@@ -1,3 +1,30 @@
+
+
+const express = require('express') 
+const cors = require('cors')
+
+const app = express()
+
+app.use(cors())
+
+app.use(express.json())
+
+app.listen(4001, function(){
+    console.log('api runing')
+})
+
+
+const conn = require('./db/conn')
+conn()
+
+// routes
+const routes = require('./routes/ProdutosRoute')
+app.use('/api', routes)
+
+
+/*
+
+console.log('hello world ')
 const { log } = require('console');
 var express = require('express');
 path = require('path');
@@ -24,3 +51,5 @@ app.get('/', function (req, res) {
 app.listen(3000, function(){
     console.log("listening on port 3000")
 });
+
+*/
