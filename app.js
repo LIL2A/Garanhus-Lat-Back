@@ -11,12 +11,14 @@ mongoose.connect('mongodb://localhost:8080', {useNewUrl: true})
     err => {console.log('Não foi possível se comunicar com o banco')});
 
 const produtoRoute = require('./routes/produtos.route');
+const gerenteRoute = require('./routes/gerente.route');
 
 var app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/produto', produtoRoute);
+app.use('/gerente', gerenteRoute);
 app.get('/', function (req, res) {
     res.send("Olá Hello Mundo World")
 });
