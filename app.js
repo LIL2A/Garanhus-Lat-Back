@@ -12,6 +12,7 @@ mongoose.connect('mongodb://localhost:8080', {useNewUrl: true})
 
 const produtoRoute = require('./routes/produtos.route');
 const gerenteRoute = require('./routes/gerente.route');
+const administradorRoute = require('./routes/administrador.route');
 
 var app = express();
 app.use(bodyParser.json());
@@ -19,6 +20,7 @@ app.use(cors());
 
 app.use('/produto', produtoRoute);
 app.use('/gerente', gerenteRoute);
+app.use('/administrador', administradorRoute);
 app.get('/', function (req, res) {
     res.send("Olá Hello Mundo World")
 });
