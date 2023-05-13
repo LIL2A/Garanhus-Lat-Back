@@ -1,3 +1,8 @@
+const express = require('express');
+const app = express();
+const administradorRoutes = express.Router();
+
+
 // api to add administrador
 administradorRoutes.route('/add').post(function (req, res) {
     let administrador = new Administrador(req.body);
