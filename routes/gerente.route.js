@@ -1,3 +1,8 @@
+const express = require('express');
+const gerenteRoutes = express.Router();
+
+let Gerente = require('../model/Gerente');
+
 // api to add gerente
 gerenteRoutes.route('/add').post(function (req, res) {
     let gerente = new Gerente(req.body);

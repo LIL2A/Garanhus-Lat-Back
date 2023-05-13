@@ -1,5 +1,4 @@
 const express = require('express');
-const app = express();
 const produtoRoutes = express.Router();
 
 let Produto = require('../model/Produto');

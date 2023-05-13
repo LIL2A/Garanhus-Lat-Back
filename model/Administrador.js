@@ -1,19 +1,19 @@
-let mogoose = require('mogoose');
-let Schema = mogoose.Schema;
+let mongoose = require('mongoose');
+let Schema = mongoose.Schema;
 
 let Administrador = new Schema({
     nome: {
-        type: string
+        type: String
     },
     email: {
-        type: string
+        type: String
     },
     cpf: {
-        type: string
+        type: String
     },
     
     },{
     collection: 'administrador'
 });
 
-module.exports = mongoose.model('administrador', Administrador);
+module.exports = mongoose.model('Administrador', Administrador);
