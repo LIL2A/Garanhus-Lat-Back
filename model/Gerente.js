@@ -1,21 +1,21 @@
-let mogoose = require('mogoose');
-let Schema = mogoose.Schema;
+let mongoose = require('mongoose');
+let Schema = mongoose.Schema;
 
 let Gerente = new Schema({
     nome: {
-        type: string
+        type: String
     },
     email: {
-        type: string
+        type: String
     },
     cpf: {
-        type: string
+        type: String
     },
     matricula: {
-        type: number
+        type: String
     }
 },{
     collection: 'gerente'
 });
 
-module.exports = mongoose.model('gerente', Gerente);
+module.exports = mongoose.model('Gerente', Gerente);
