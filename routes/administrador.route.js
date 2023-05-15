@@ -44,3 +44,5 @@ administradorRoutes.route('/update/:id').put(function (req, res) {
     }
   });
 });
+
+module.exports = administradorRoutes;
