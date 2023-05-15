@@ -14,6 +14,7 @@ let Administrador = new Schema({
     
     },{
     collection: 'administrador'
+
 });
 
 module.exports = mongoose.model('Administrador', Administrador);
