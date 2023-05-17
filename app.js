@@ -19,8 +19,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/produto', produtoRoute);
-// app.use('/gerente', gerenteRoute);
-// app.use('/administrador', administradorRoute); 
+app.use('/gerente', gerenteRoute);
+app.use('/administrador', administradorRoute); 
 
 app.get('/', function (req, res) {
     res.send("Olá Hello Mundo World")

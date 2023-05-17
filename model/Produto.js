@@ -17,7 +17,7 @@ let Produto = new Schema({
     classificacao: {
         type: String
     },
-    descrição: {
+    descricao: {
         type: String
     },
     foto: {
