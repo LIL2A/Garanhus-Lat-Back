@@ -56,3 +56,5 @@ administradorRoutes.route('/delete/:id').delete(function (req, res) {
       }
     });
   });
+
+module.exports = administradorRoutes;
