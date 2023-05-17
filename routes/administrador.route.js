@@ -45,4 +45,14 @@ administradorRoutes.route('/update/:id').put(function (req, res) {
   });
 });
 
-module.exports = administradorRoutes;
+  // api for delete
+administradorRoutes.route('/delete/:id').delete(function (req, res) {
+    Administrador.findByIdAndRemove({_id: req.params.id}, function(err,){
+      if(err){
+        res.status(400).send({'status': 'failure','mssg': 'Algo deu errado.'});
+      }
+      else {
+        res.status(200).json({'status': 'success','mssg': 'Deletado com sucesso.'});
+      }
+    });
+  });
