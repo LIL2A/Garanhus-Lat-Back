@@ -1,3 +1,9 @@
+const express = require('express');
+const motoristaRoutes = express.Router();
+
+let Motorista = require('../model/Motorista');
+
+
 // api to add motorista
 motoristaRoutes.route('/add').post(function (req, res) {
     let motorista = new Motorista(req.body);
