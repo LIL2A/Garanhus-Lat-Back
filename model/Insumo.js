@@ -1,11 +1,11 @@
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
-let Produto = new Schema({
-    nome: {
+let Insumo = new Schema({
+    quantidade: {
         type: String
     },
-    ncm: {
+    turno: {
         type: String
     },
     lote: {
@@ -16,15 +16,9 @@ let Produto = new Schema({
     },
     classificacao: {
         type: String
-    },
-    descricao: {
-        type: String
-    },
-    foto: {
-        type: String
     }
 },{
-    collection: 'produto'
+    collection: 'insumo'
 });
 
-module.exports = mongoose.model('Produtos', Produto);
+module.exports = mongoose.model('Insumo', Insumo);
